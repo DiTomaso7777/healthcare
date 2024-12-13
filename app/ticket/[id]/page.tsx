@@ -10,7 +10,7 @@ import { useStorageUrl } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
 export default function TicketPage() {
-  const { user } = useUser();
+
   const params = useParams();
   const ticket = useQuery(api.tickets.getById, {
     ticketId: params.id as Id<"tickets">,

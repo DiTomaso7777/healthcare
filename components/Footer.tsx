@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 
 const Footer: React.FC = () => {
-  const navItems = ['Home', 'About', 'Services', 'Contact'];
+
   const socialIcons = [
     { icon: <FaFacebook size={20} />, href: "#" },
     { icon: <FaTwitter size={20} />, href: "#" },
