@@ -2,7 +2,7 @@
 
 import { api } from "@/convex/_generated/api";
 import { useQuery } from "convex/react";
-import { Download, User, CalendarDays } from "lucide-react";
+import { User, CalendarDays } from "lucide-react";
 import Loader from "./Loader";
 import "@/components/ticketlist.css";
 import Link from "next/link";

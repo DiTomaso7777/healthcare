@@ -20,7 +20,7 @@ import { api } from "@/convex/_generated/api";
 import { useRouter } from "next/navigation";
 import { useRef, useState, useTransition } from "react";
 import { Id } from "@/convex/_generated/dataModel";
-import { Loader2, Upload } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useStorageUrl } from "@/lib/utils";
 
@@ -71,7 +71,7 @@ export default function TicketForm({ mode, initialData }: TicketFormProps) {
   const [file, setFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
   const generateUploadUrl = useMutation(api.storage.generateUploadUrl);
-  const updateTicketFile = useMutation(api.storage.updateTicketFile);
+
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
