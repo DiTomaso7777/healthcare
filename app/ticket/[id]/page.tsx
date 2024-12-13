@@ -5,7 +5,6 @@ import { api } from "@/convex/_generated/api";
 import { useQuery } from "convex/react";
 import { CalendarDays, Phone, Mail, FileText } from "lucide-react";
 import { useParams } from "next/navigation";
-import { useUser } from "@clerk/nextjs";
 import { useStorageUrl } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 

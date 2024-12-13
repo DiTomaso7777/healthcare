@@ -2,6 +2,7 @@
 import React from 'react';
 import { SignInButton, SignOutButton, SignedIn, SignedOut, UserButton, useUser } from '@clerk/nextjs';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Hero: React.FC = () => {
   const { user } = useUser();
@@ -54,11 +55,9 @@ const Hero: React.FC = () => {
           {/* Right Side - Julia Image */}
           <SignedIn>
             <div className="order-2 md:order-none w-full md:w-1/2 mt-8 md:mt-0 flex justify-center">
-              <img 
-                src="https://i.ibb.co/JxfsKB7/Julia.png" 
-                alt="Doctor" 
-                className="block w-full max-w-xs h-auto object-contain"
-              />
+              <Image src="https://i.ibb.co/JxfsKB7/Julia.png" alt="Doctor" className="block w-full max-w-xs h-auto object-contain" width={200} height={200} />
+                
+             
             </div>
           </SignedIn>
         </div>
