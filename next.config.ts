@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // ... other configurations
+
+  // Add the domain to the list of allowed hosts
+  images: {
+    domains: ['i.ibb.co'], // Add this line
+  },
 };
 
 export default nextConfig;

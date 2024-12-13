@@ -1,0 +1,13 @@
+[
+    {
+        "userId": 12031923,
+        "userName": "Someone",
+        "userMail": "someone@mail.com",
+        "userPhone": "0725701041",
+        "fileUpload": "yes",
+        "timestamp": 202412091212,
+        "status": "new",
+        "paymentStatus": "unpaid",
+        "admin": false
+    }
+]
