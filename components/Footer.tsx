@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import Image from 'next/image';
-import logo from '@/images/logo.svg';
+
 
 
 const Footer: React.FC = () => {
@@ -20,9 +20,12 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
             {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
-              <Image src={logo} alt="Logo" width={120} height={120} />
-            </Link>
+            <Link href="/" className="flex-shrink-0 flex items-center">
+          <Image src="https://i.ibb.co/C5B1v6Q/logo.png" alt="Logo" width={120} height={120} />
+          <span className="text-white text-2xl ml-2">
+           <strong>Hemo</strong>Tech
+           </span>
+        </Link>
 
           {/* Social Media Icons */}
           <div className="flex space-x-6 mb-6 md:mb-0">

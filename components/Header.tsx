@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '@/images/logo.svg';
 
 const Header: React.FC = () => {
   const [activeLink, setActiveLink] = useState('Home');
@@ -19,8 +18,11 @@ const Header: React.FC = () => {
     <header className="bg-blue-500 text-white py-4 px-6">
       <div className="container mx-auto flex justify-between items-center relative">
         {/* Logo */}
-        <Link href="/" className="flex-shrink-0">
-          <Image src={logo} alt="Logo" width={120} height={120} />
+        <Link href="/" className="flex-shrink-0 flex items-center">
+          <Image src="https://i.ibb.co/C5B1v6Q/logo.png" alt="Logo" width={120} height={120} />
+          <span className="text-white text-2xl ml-2">
+           <strong>Hemo</strong>Tech
+           </span>
         </Link>
   
         {/* Hamburger Menu Icon */}
