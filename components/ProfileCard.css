@@ -1,0 +1,234 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: #3b82f6; /* Updated to blue */
+  --first-color-light: #2563eb; /* Updated to blue */
+  --black-color: hsl(29, 16%, 10%);
+  --text-color: hsl(29, 8%, 65%);
+  --body-color: hsl(29, 100%, 99%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --h3-font-size: 1.125rem;
+  --smaller-font-size: .75rem;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.card {
+  width: 290px;
+  background-color: white;
+  box-shadow: 0 8px 20px hsla(29, 60%, 40%, 0.1);
+  padding: 1.5rem 2rem 2rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px hsla(29, 60%, 40%, 0.2);
+}
+
+.card__border {
+  width: 110px;
+  height: 110px;
+  background-color: var(--first-color-light);
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.card__perfil {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__img {
+  width: 80px;
+}
+
+.card__name {
+  font-size: var(--h3-font-size);
+  color: var(--black-color);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.card__profession {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.card__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card__social-link {
+  color: var(--text-color);
+  font-size: 1.25rem;
+  transition: color 0.3s;
+}
+
+.card__social-link:hover {
+  color: var(--first-color);
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.card__info-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: .25rem;
+}
+
+.card__info-description {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+}
+
+.card__button {
+  display: block;
+  padding: 0.75rem 2rem;
+  background-color: var(--first-color);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: box-shadow 0.3s;
+  margin-top: 1.5rem;
+}
+
+.card__button:hover {
+  box-shadow: 0 4px 12px hsla(29, 60%, 40%, 0.2);
+}
+
+/* Rotate social */
+.card:hover .card__social {
+  animation: rotate-social 1s ease-in-out infinite;
+}
+
+@keyframes rotate-social {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Up animation */
+.card:hover .card__border {
+  animation: up-border 1s ease-in-out infinite;
+}
+
+@keyframes up-border {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Down animation */
+.card:hover .card__img,
+.card:hover .card__name,
+.card:hover .card__profession,
+.card:hover .card__info,
+.card:hover .card__button {
+  animation: down-elements 1s ease-in-out infinite;
+}
+
+@keyframes down-elements {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Example gradient blue color */
+.profile-card {
+  background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white; /* Ensure text is readable on the blue background */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+card__button {
+  /* Keep your existing styles for shape and font */
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.75rem 2rem; /* Adjust padding as needed */
+  border: none;
+  border-radius: 2rem; /* Preserve the pill shape */
+  cursor: pointer;
+  font-size: var(--h3-font-size);
+  transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.card__button:hover {
+  background-color: var(--first-color-light);
+}
+
+/* Center the button */
+.card__button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* Add margin if needed */
+}
