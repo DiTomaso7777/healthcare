@@ -33,5 +33,13 @@ export default defineSchema({
     .index("by_email", ["email"])
     .index("by_userId", ["userId"]),
 
-    
+    medics: defineTable({
+      name: v.string(),
+      spec: v.string(),
+      mail: v.string(),
+      userId: v.optional(v.string()),
+      fileUploadId: v.optional(v.id("_storage")),
+    })
+      .index("by_mail", ["mail"])
+      .index("by_spec", ["spec"]),
 });
