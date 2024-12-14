@@ -7,7 +7,7 @@ const ServiceDescription: React.FC = () => {
       <div className="service-description__content">
         <h2 className="service-description__title">Our Services</h2>
         <p className="service-description__text">
-          We offer a wide range of services to meet your needs. Our team of professionals is dedicated to providing top-quality solutions to help you achieve your goals.
+        At our clinic, we specialize in comprehensive hematology and blood analysis services. Our team of experienced healthcare professionals is dedicated to providing accurate diagnostics and personalized treatment plans. We utilize state-of-the-art technology to ensure the highest quality of care, helping you maintain optimal health and well-being.
         </p>
       </div>
       <div className="separator">
