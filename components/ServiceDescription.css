@@ -1,0 +1,35 @@
+.service-description {
+    position: relative;
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+    color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .service-description__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .service-description__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-description__text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .separator {
+    margin-top: 2rem;
+  }
+  
+  .separator__line {
+    border: none;
+    height: 2px;
+    background-color: #ffffff;
+    width: 50%;
+    margin: 0 auto;
+  }
